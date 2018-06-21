@@ -134,7 +134,7 @@ evolutionary tree for a given locus). The data for each locus is stored as one
 alignment in its own NEXUS file. Taxa names in each alignment have to be unique,
 but duplicates across alignments are fine.
 
-To load a NEXUS format alignment, click the button with the plus symbol ($+$) in
+To load a NEXUS format alignment, click the button with the plus symbol (+) in
 the lower left corner of the main **Partitions** tab. For this tutorial,
 navigate to the **examples/nexus** subfolder inside the **beast**
 application folder, and select all of the first seven NEXUS files. They should
@@ -197,7 +197,7 @@ Ploidy should be based on the mode of inheritance for each gene. By convention,
 nuclear genes in diploids are given a ploidy of 2.0. Because mitochondrial and Y
 chromosome genes are haploid even in otherwise diploid organisms, and also
 inherited only through the mother or the father respectively, their effective
-population size $N_e$ is only one quarter that of nuclear genes. Therefore if
+population size N<sup>e</sup> is only one quarter that of nuclear genes. Therefore if
 nuclear gene ploidy is set to 2.0, mitochondrial or Y chromosome gene ploidy
 should be set to 0.5. In this analysis all genes are from nuclear loci and their
 ploidy should be left at the default value of 2.0.
@@ -284,7 +284,7 @@ differences in substitution rates, so we should constrain the per-species branch
 rates to a reasonable range of values. Click the button next to
 _branchRates.Species_ to define this range. Change _Lower_ to 0.1 and
 _Upper_ to 10.0, which means that the fastest branch rate can not be more than
-$100\times$ that of the slowest branch rate.
+100 times that of the slowest branch rate.
 
 
 <figure>
@@ -324,8 +324,8 @@ be set relative to the total length of the chain. Sampling too often will result
 in very large files with little extra benefit in terms of the precision of the
 analysis. Sample too infrequently and the log file will not contain much
 information about the distributions of the parameters. You probably want to aim
-to store no more than $10000$ samples so this should be set to no less than
-$\text{chain length}\div10000$. For this exercise, leave the default **Store
+to store no more than 10000 samples so this should be set to no less than
+(chain length)/10000. For this exercise, leave the default **Store
 Every** and **Log Every** settings in place.
 
 If you are using Windows then we suggest you add the suffix _.txt_ to the
@@ -387,11 +387,11 @@ confidence interval. The HPD for the sum of rate changes suggests that either 0,
 For any Bayesian analysis, it is very important to compare your findings with
 the prior distribution. The default prior distribution for the number of
 substitution rate shifts for a random local clock is a Poisson distribution
-with the $\lambda$ parameter fixed at $\ln(2) \approx 0.69$. The prior
+with the \lambda parameter fixed at ln(2), which is approximately 0.69. The prior
 probability of zero rate changes for the default distribution is equal to
-50\%. Tracer reported that around 1250 samples had zero rate shifts,
-out of $9000000 \div 5000 = 1800$ post-burnin posterior samples. This means that after
-adding data, our belief in a strict clock increased from 50\% to about 70\%,
+50%. Tracer reported that around 1250 samples had zero rate shifts
+(out of 9000000/5000 = 1800) post-burnin posterior samples. This means that after
+adding data, our belief in a strict clock increased from 50% to about 70%,
 a very modest change. The data in this tutorial suggests that a strict clock
 applies to pocket gophers, but falls far short of any standard of proof.
 
@@ -401,7 +401,7 @@ BEAST also produces a sample of plausible trees. These can be summarized using
 the program **TreeAnnotator**. This will take the set of trees and identify
 a single tree that best represents the posterior distribution. It will then
 annotate this selected tree topology with the mean ages of all the nodes as well
-as the 95\% HPD interval of divergence times for each clade in the selected
+as the 95% HPD interval of divergence times for each clade in the selected
 tree. It will also calculate the posterior clade probability for each node. Run
 the **TreeAnnotator** program and set it up to look like in the figure below.
 
